@@ -1,20 +1,5 @@
 import {useEffect, useState} from "react";
 
-const placeholder = `1000
-2000
-3000
-
-4000
-
-5000
-6000
-
-7000
-8000
-9000
-
-10000`;
-
 const parseElves = (input: string) => {
     const elves = input.split(/\n\s*\n/)
     return elves
@@ -33,28 +18,27 @@ const d1part1 = (elvesCount: number[]): { position: number, calories: number } =
     }
 }
 
-const d1part2 = (elvesCount: number[]): { calories: number } => {
-    const top3 = elvesCount.sort().reverse().slice(0, 3);
-    const indexCalories = top3
-        .reduce((a, b) => b ? a + b : a, 0)
-
+const d1part2 = (elvesCount: number[], topX: number): { calories: number } => {
+    const copy = [...elvesCount];
+    const sorted = copy.sort((a, b) => b - a).slice(0, topX);
+    const indexCalories = sorted.reduce((a, b) => b ? a + b : a, 0)
     return {
         calories: indexCalories
     }
 }
 
-const useDay1 = () => {
-    const [caloriesList, setCaloriesList] = useState<string>(placeholder);
+const useDay1 = (initialValue: string) => {
+    const [caloriesList, setCaloriesList] = useState<string>(initialValue);
     const [mostCalories, setMostCalories] = useState<{ position: number, calories: number }>();
-    const [top3, setTop3] = useState<{ calories: number }>();
+    const [topX, setTopX] = useState<{ calories: number }>();
 
     useEffect(() => {
         const parsedElves = parseElves(caloriesList);
         setMostCalories(d1part1(parsedElves))
-        setTop3(d1part2(parsedElves))
+        setTopX(d1part2(parsedElves, 3))
     }, [caloriesList])
 
-    return {setCaloriesList, mostCalories, top3}
+    return {setCaloriesList, mostCalories, top3: topX}
 }
 
 export {useDay1}
