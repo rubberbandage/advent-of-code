@@ -1,6 +1,7 @@
 import {useDay1} from "./d1";
 import {ChangeEvent} from "react";
 import {TextArea} from "../../components";
+import {Layout} from "../../components/Layout";
 
 const initialValue = `1000
 2000
@@ -24,8 +25,7 @@ const Day1 = () => {
         setCaloriesList(event.target.value)
     }
 
-    return <div className="container">
-        <h1>Most Calories</h1>
+    return <Layout title='Most Calories'>
         <TextArea name="paragraph_text" onChange={onChangeTextArea} initialValue={initialValue}/>
         <div style={{
             display: "flex",
@@ -36,7 +36,7 @@ const Day1 = () => {
             </p>
             <p>Part 2: Top 3 Elves have <span>{top3?.calories}</span> calories</p>
         </div>
-    </div>
+    </Layout>
 }
 
 export default Day1;

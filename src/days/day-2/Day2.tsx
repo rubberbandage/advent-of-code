@@ -1,8 +1,8 @@
+import {Layout} from "../../components/Layout";
+
 const Day2 = () => {
-    return <>
-        <h1>Rock Paper Scissors</h1>
-        <p>Elf calories</p>
-    </>
+    return <Layout title={"Rock Paper Scissors"}>
+    </Layout>
 }
 
 export default Day2;
