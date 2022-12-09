@@ -4,7 +4,7 @@ import {FaChevronLeft, FaChevronRight} from 'react-icons/fa';
 import {IconButton} from "./components/IconButton";
 
 const minDate = 1;
-const maxDate = 1;
+const maxDate = 2;
 
 function App() {
     const [date, setDate] = useState(1)

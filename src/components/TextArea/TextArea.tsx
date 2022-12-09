@@ -9,6 +9,8 @@ const TextArea = ({onChange, initialValue, ...props}: Props) =>
     <textarea name="paragraph_text"
               cols={80}
               rows={30}
-              onChange={onChange} {...props}>{initialValue}</textarea>
+              onChange={onChange}
+              defaultValue={initialValue}
+              {...props} />
 
 export {TextArea};
