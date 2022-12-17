@@ -1,5 +1,4 @@
 import {useDay1} from "./d1";
-//@ts-ignore
 import d1Markdown from "./d1.md";
 import React, {ChangeEvent} from "react";
 import {Layout} from "../../components/Layout";
