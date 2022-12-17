@@ -1,15 +1,14 @@
-import React, {Suspense, useEffect, useState} from 'react';
+import React, {Suspense, useState} from 'react';
 import './App.css';
 
 import {FaChevronLeft, FaChevronRight} from 'react-icons/fa';
 import {IconButton} from "./components/IconButton";
-import Code from "./components/Code";
 
 const minDate = 1;
-const maxDate = 3;
+const maxDate = 4;
 
 function App() {
-    const [date, setDate] = useState(1)
+    const [date, setDate] = useState(minDate)
     const MyLazyLoaded = React.lazy(() => import(`./days/day-${date}/Day${date}`));
 
     return (
