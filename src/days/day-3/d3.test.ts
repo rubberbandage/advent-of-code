@@ -69,3 +69,16 @@ CrZsJsPPZsGzwwsLwLmpwMDw`;
 
     expect(result.current.sumOfPriorities).toEqual(157);
 })
+
+test('item types for three elf group', () => {
+    const initialValue = `vJrwpWtwJgWrhcsFMMfFFhFp
+jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
+PmmdzqPrVvPwwTWBwg
+wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
+ttgJtRGJQctTZtZT
+CrZsJsPPZsGzwwsLwLmpwMDw`;
+
+    const {result} = renderHook(() => useDay3(initialValue));
+
+    expect(result.current.threeElfGroup).toEqual(70);
+})
