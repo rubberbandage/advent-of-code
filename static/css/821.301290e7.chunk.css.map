@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/821.301290e7.chunk.css","mappings":"AAAA,SACI,wBACJ,CAEA,KACI,+BACJ","sources":["components/TextArea/TextArea.css"],"sourcesContent":["textarea {\n    background-color: #b9ffff;\n}\n\nbody {\n    background-color: black !important;\n}"],"names":[],"sourceRoot":""}
