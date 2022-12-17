@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   min-height: 100vh;
   background-color: #282c34;
 }
@@ -15,16 +14,21 @@
   justify-content: space-between;
 }
 
-h1 {
+p {
   margin: 0.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 0.5rem;
+}
+h2 {
+  text-align: center;
 }
 .content {
   display: flex;
   flex-direction: column;
   color: white;
-}
-p {
-  margin: 0.5rem;
 }
 
 .container {

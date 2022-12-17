@@ -1,6 +1,5 @@
 import {Layout} from "../../components/Layout";
 import {useDay2} from "./d2";
-import {TextArea} from "../../components";
 import {ChangeEvent} from "react";
 
 const initialValue = `A Y
@@ -14,8 +13,7 @@ const Day2 = () => {
         setStrategyGuide(event.target.value)
     }
 
-    return <Layout title={"Rock Paper Scissors"}>
-        <TextArea name="paragraph_text" onChange={onChangeTextArea} initialValue={initialValue}/>
+    return <Layout title={"Rock Paper Scissors"} onChange={onChangeTextArea} initialValue={initialValue}>
         <div style={{
             display: "flex",
             flexDirection: 'column',

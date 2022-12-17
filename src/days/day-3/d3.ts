@@ -17,7 +17,6 @@ const useDay3 = (initialValue: string) => {
 
         setTypes(commonLetter);
         const p = commonLetter.map((letter) => priority(letter));
-        console.log('PPPP', p)
         setPriorities(p);
     }, [unparsedRucksacks]);
 

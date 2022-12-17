@@ -1,6 +1,7 @@
 import {useDay1} from "./d1";
-import {ChangeEvent} from "react";
-import {TextArea} from "../../components";
+//@ts-ignore
+import d1Markdown from "./d1.md";
+import React, {ChangeEvent} from "react";
 import {Layout} from "../../components/Layout";
 
 const initialValue = `1000
@@ -25,17 +26,15 @@ const Day1 = () => {
         setCaloriesList(event.target.value)
     }
 
-    return <Layout title='Most Calories'>
-        <TextArea name="paragraph_text" onChange={onChangeTextArea} initialValue={initialValue}/>
-        <div style={{
-            display: "flex",
-            flexDirection: 'column',
-            alignItems: 'start'
-        }}>
-            <p>Part 1: Elf <span>{mostCalories?.position}</span> carries <span>{mostCalories?.calories}</span> calories
-            </p>
-            <p>Part 2: Top 3 Elves have <span>{top3?.calories}</span> calories</p>
-        </div>
+    return <Layout
+        title='Most Calories'
+        onChange={onChangeTextArea}
+        initialValue={initialValue}
+        markdown={d1Markdown}
+    >
+        <p>Part 1: Elf <span>{mostCalories?.position}</span> carries <span>{mostCalories?.calories}</span> calories
+        </p>
+        <p>Part 2: Top 3 Elves have <span>{top3?.calories}</span> calories</p>
     </Layout>
 }
 

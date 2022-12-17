@@ -2,9 +2,10 @@ import {useEffect, useState} from "react";
 
 type Move = "ROCK" | "PAPER" | "SCISSORS"
 type Result = "DRAW" | "WIN" | "LOSE"
-const winOrder: Move[] = ['ROCK', 'SCISSORS', 'PAPER'];
 type PvP = [Move, Move];
 type PvM = [Move, Result];
+
+const winOrder: Move[] = ['ROCK', 'SCISSORS', 'PAPER'];
 
 const scores: { [key in Move]: number } = {
     ROCK: 1,
